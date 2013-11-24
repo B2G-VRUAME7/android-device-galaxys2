@@ -256,7 +256,6 @@ COMMON_WIFI="
 	nvram_mfg.txt
 	nvram_net.txt
 	nvram_net.txt_a0
-	nvram_net.txt_IL
 	nvram_net.txt_murata_a0
 	nvram_net.txt_muratafem1
 	nvram_net.txt_muratafem2
