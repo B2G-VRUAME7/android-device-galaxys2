@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=galaxys2
+DEVICE=galaxys4
 COMMON=c1-common
 MANUFACTURER=samsung
 
@@ -31,37 +31,13 @@ else
 fi
 
 case "$DEVICE_BUILD_ID" in
-"IML74K.UHLPE")
-  FIRMWARE=UHLPE ;;
-"IML74K.XXLPQ")
-  FIRMWARE=XXLPQ ;;
-"IML74K.ZSLPF")
-  FIRMWARE=ZSLPF ;;
-"IML74K.XWLP7")
-  FIRMWARE=XWLP7 ;;
-"IML74K.BGLP8")
-  FIRMWARE=BGLP8 ;;
-"IML74K.BGLP9")
-  FIRMWARE=BGLP9 ;;
-"IML74K.ZSLPG")
-  FIRMWARE=ZSLPG ;;
-"IML74K.XWLPD")
-  FIRMWARE=XWLPD ;;
-"IML74K.XWLPI")
-  FIRMWARE=XWLPI ;;
+"JDQ39.I545VRUAME7")
+  FIRMWARE=ME7 ;;
 *)
   echo Your device has unknown firmware $DEVICE_BUILD_ID >&2
   echo >&2
   echo Supported firmware: >&2
-  echo UHLPE >&2
-  echo XXLPQ >&2
-  echo ZSLPF >&2
-  echo XWLP7 >&2
-  echo BGLP8 >&2
-  echo BGLP9 >&2
-  echo ZSLPG >&2
-  echo XWLPD >&2
-  echo XWLPI >&2
+  echo JDQ39.I545VRUAME7 >&2
   exit 1 ;;
 esac
 
