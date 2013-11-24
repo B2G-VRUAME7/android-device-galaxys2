@@ -166,22 +166,8 @@ copy_local_files()
 }
 
 COMMON_LIBS="
-	libion.so
-	libddc.so
-	libedid.so
-	libcec.so
-	libfimg.so
-	libfimc.so
-	libhdmi.so
-	libhdmiclient.so
-	libTVOut.so
 	libril.so
 	libsecril-client.so
-	libsec-ril.so
-	libMali.so
-	libUMP.so
-	libakm.so
-	libs5pjpeg.so
 	libtvoutservice.so
 	libtvoutinterface.so
 	libdirencryption.so
@@ -227,9 +213,9 @@ copy_files "$COMMON_CAMERADATA" "system/cameradata" "cameradata"
 
 COMMON_EGL="
 	egl.cfg
-	libEGL_mali.so
-	libGLESv1_CM_mali.so
-	libGLESv2_mali.so
+	libEGL_adreno200.so
+	libGLESv1_CM_adreno200.so
+	libGLESv2_adreno200.so
 	"
 copy_files "$COMMON_EGL" "system/lib/egl" "egl"
 
@@ -241,28 +227,21 @@ COMMON_FIRMWARE="
 fi
 
 copy_files "$COMMON_FIRMWARE" "system/etc/firmware" "firmware"
-copy_files "libpn544_fw.so" "system/vendor/firmware" "firmware"
 
 COMMON_HW="
-	alsa.default.so
 	audio.a2dp.default.so
 	audio_policy.default.so
 	audio.primary.default.so
-	audio.primary.exynos4.so
+	audio.primary.msm8960.so
 	audio.primary.goldfish.so
-	camera.exynos4.so
-	gps.exynos4.so
-	gralloc.exynos4.so
-	lights.exynos4.so
-	sensors.default.so
+	camera.msm8960.so
+	gralloc.msm8960.so
+	sensors.msm8960.so
 	"
 copy_files "$COMMON_HW" "system/lib/hw" "hw"
 
 COMMON_IDC="
-	melfas_ts.idc
 	qwerty2.idc
-	sec_touchscreen.idc
-	mxt224_ts_input.idc
 	qwerty.idc
 	"
 copy_local_files "$COMMON_IDC" "system/usr/idc" "idc"
@@ -276,58 +255,29 @@ COMMON_KEYCHARS="
 copy_files "$COMMON_KEYCHARS" "system/usr/keychars" "keychars"
 
 COMMON_WIFI="
-	bcm4330_apsta.bin
-	bcm4330_mfg.bin
-	bcm4330_p2p.bin
-	bcm4330_sta.bin
+	bcmdhd_apsta.bin
+	bcmdhd_mfg.bin
+	bcmdhd_sta.bin
 	nvram_mfg.txt
 	nvram_net.txt
-	nvram_net.txt_AU
+	nvram_net.txt_a0
 	nvram_net.txt_IL
-	nvram_net.txt_murata
-	nvram_net.txt_murata_AU
-	nvram_net.txt_murata_IL
-	nvram_net.txt_murata_SG
-	nvram_net.txt_murata_TN
-	nvram_net.txt_SG
-	nvram_net.txt_TN
+	nvram_net.txt_murata_a0
+	nvram_net.txt_muratafem1
+	nvram_net.txt_muratafem2
+	nvram_net.txt_semco3rd
+	nvram_net.txt_semco3rd_a0
+	nvram_net.txt_semcosh
 	wpa_supplicant.conf
 	"
 copy_files "$COMMON_WIFI" "system/etc/wifi" "wifi"
 
 COMMON_AUDIO="
-	libasound.so
-	libsamsungSoundbooster.so
-	libsamsungAcousticeq.so
 	libsoundalive.so
 	libsoundspeed.so
-	libaudiohw.so
-	libmediayamaha.so
-	libmediayamahaservice.so
-	lib_Samsung_Acoustic_Module_Llite.so
 	lib_Samsung_Resampler.so
-	lib_Samsung_Sound_Booster.so
-	liblvvefs.so
 	"
 copy_files "$COMMON_AUDIO" "system/lib" "audio"
-
-COMMON_AUDIO_CONFIG="
-	LVVEFS_Rx_Configuration.txt
-	LVVEFS_Tx_Configuration.txt
-	Rx_ControlParams_BLUETOOTH_HEADSET.txt
-	Rx_ControlParams_EARPIECE_WIDEBAND.txt
-	Rx_ControlParams_SPEAKER_WIDEBAND.txt
-	Rx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt
-	Rx_ControlParams_WIRED_HEADSET_WIDEBAND.txt
-	Tx_ControlParams_BLUETOOTH_HEADSET.txt
-	Tx_ControlParams_EARPIECE_WIDEBAND.txt
-	Tx_ControlParams_SPEAKER_WIDEBAND.txt
-	Tx_ControlParams_WIRED_HEADPHONE_WIDEBAND.txt
-	Tx_ControlParams_WIRED_HEADSET_WIDEBAND.txt
-	"
-copy_files "$COMMON_AUDIO_CONFIG" "system/etc/audio" "audio"
-copy_files "asound.conf" "system/etc" "audio"
-copy_files "alsa.conf" "system/usr/share/alsa" "audio"
 
 COMMON_MEDIA="
 	battery_batteryerror.qmg
