@@ -186,11 +186,6 @@ COMMON_LIBS="
 
 copy_files "$COMMON_LIBS" "system/lib" ""
 
-if [[ -z "${ANDROIDFS_DIR}" ]]; then
-   HCDNAME=`basename \`adb shell ls /system/bin/*.hcd\` | tr -d '\r'`
-else
-   HCDNAME=`basename ${ANDROIDFS_DIR}/system/bin/*.hcd`
-fi
 COMMON_BINS="
 	playlpm
 	immvibed
