@@ -106,6 +106,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/samsung/galaxys4/vold.fstab:system/etc/vold.fstab
 
+PRODUCT_PACKAGES += signapk
+
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
 # of the aspects that require proprietary drivers that aren't
