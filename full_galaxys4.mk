@@ -24,7 +24,7 @@
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-$(call inherit-product, device/samsung/galaxys2/galaxys2.mk)
+$(call inherit-product, device/samsung/galaxys4/galaxys4.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full.mk)
 
 # Galaxy S uses high-density artwork where available
@@ -36,8 +36,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.moz.ril.dial_emergency_call=true
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_galaxys2
-PRODUCT_DEVICE := galaxys2
+PRODUCT_NAME := full_galaxys4
+PRODUCT_DEVICE := galaxys4
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_MODEL := GT-I9100

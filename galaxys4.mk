@@ -79,7 +79,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_LOCALES := hdpi
 
 # kernel modules for ramdisk
-RAMDISK_MODULES = $(addprefix device/samsung/galaxys2/,bthid.ko dhd.ko gspca_main.ko j4fs.ko \
+RAMDISK_MODULES = $(addprefix device/samsung/galaxys4/modules/,bthid.ko dhd.ko gspca_main.ko j4fs.ko \
 	scsi_wait_scan.ko Si4709_driver.ko vibrator.ko)
 PRODUCT_COPY_FILES += $(foreach module,\
 	$(RAMDISK_MODULES),\
@@ -87,15 +87,15 @@ PRODUCT_COPY_FILES += $(foreach module,\
 
 # other kernel modules not in ramdisk
 PRODUCT_COPY_FILES += $(foreach module,\
-	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/*.ko)),\
+	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys4/modules/*.ko)),\
 	$(module):system/lib/modules/$(notdir $(module)))
 
 # kernel modules for recovery ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/galaxys2/j4fs.ko:recovery/root/lib/modules/j4fs.ko
+    device/samsung/galaxys4/modules/j4fs.ko:recovery/root/lib/modules/j4fs.ko
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := device/samsung/galaxys2/kernel
+    LOCAL_KERNEL := device/samsung/galaxys4/kernel
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -104,10 +104,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/vold.fstab:system/etc/vold.fstab
+	device/samsung/galaxys4/vold.fstab:system/etc/vold.fstab
 
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
 # of the aspects that require proprietary drivers that aren't
 # commonly available
-$(call inherit-product-if-exists, vendor/samsung/galaxys2/galaxys2-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/galaxys4/galaxys4-vendor.mk)
