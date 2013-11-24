@@ -20,7 +20,6 @@
 # Set this up here so that BoardVendorConfig.mk can override it
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_PREBUILT_LIBAUDIO := true
-BOARD_USE_YAMAHAPLAYER := true
 
 BOARD_USES_LIBSECRIL_STUB := true
 
@@ -79,7 +78,7 @@ BOARD_NAND_PAGE_SIZE := 4096
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_CMDLINE := console=ttySAC2,115200 consoleblank=0
-TARGET_PREBUILT_KERNEL := device/samsung/galaxys2/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/galaxys4/kernel
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
@@ -87,18 +86,18 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Connectivity - Wi-Fi
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_HOSTAPD_DRIVER        := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE           := bcmdhd
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
-WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
-WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4330_sta.bin"
-WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4330_aps.bin"
-WIFI_DRIVER_MODULE_NAME     :=  "dhd"
-WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/etc/wifi/bcm4330_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
+#BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+#WPA_SUPPLICANT_VERSION := VER_0_8_X
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+#BOARD_HOSTAPD_DRIVER        := NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
+#OARD_WLAN_DEVICE           := bcmdhd
+#WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
+#WIFI_DRIVER_MODULE_PATH     := "/lib/modules/dhd.ko"
+#WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wifi/bcm4330_sta.bin"
+#WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wifi/bcm4330_aps.bin"
+#IFI_DRIVER_MODULE_NAME     :=  "dhd"
+#WIFI_DRIVER_MODULE_ARG      :=  "firmware_path=/system/etc/wifi/bcm4330_sta.bin nvram_path=/system/etc/wifi/nvram_net.txt"
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 12
@@ -106,7 +105,7 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2/recovery/recovery_ui.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys4/recovery/recovery_ui.c
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
