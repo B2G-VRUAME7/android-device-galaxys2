@@ -255,6 +255,8 @@ COMMON_LIBS="
 	libqmi_client_qmux.so
 	libreference-ril.so
 	libril-qcril-hook-oem.so
+	libril-qc-qmi-1.so
+	libril.so
 	libsecril-client.so
 	libtime_genoff.so
 	libmm-color-convertor.so
