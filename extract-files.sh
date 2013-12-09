@@ -401,7 +401,6 @@ COMMON_WIFI="
 	cred.conf
 	nvram_mfg.txt
 	nvram_mfg.txt_a0
-	nvram_mfg.txt:etc/wifi/nvram_mfg.txt_murata
 	nvram_mfg.txt_murata_a0
 	nvram_mfg.txt_muratafem1
 	nvram_mfg.txt_muratafem2
@@ -410,7 +409,6 @@ COMMON_WIFI="
 	nvram_mfg.txt_semcosh
 	nvram_net.txt
 	nvram_net.txt_a0
-	nvram_net.txt:etc/wifi/nvram_net.txt_murata
 	nvram_net.txt_murata_a0
 	nvram_net.txt_muratafem1
 	nvram_net.txt_muratafem2
